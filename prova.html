@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carrello Virtuale</title>
+<link rel="stylesheet" href="style_prova.css">
+</head>
+<body>
+
+<h1>Carrello Virtuale</h1>
+
+<div id="products">
+  <div class="product">
+    <img src="product1.jpg" alt="Prodotto 1">
+    <p>Prodotto 1 - Prezzo: $10</p>
+    <button onclick="addToCart('Prodotto 1', 10)">Aggiungi al carrello</button>
+  </div>
+  <div class="product">
+    <img src="product2.jpg" alt="Prodotto 2">
+    <p>Prodotto 2 - Prezzo: $15</p>
+    <button onclick="addToCart('Prodotto 2', 15)">Aggiungi al carrello</button>
+  </div>
+  <!-- Aggiungi più prodotti qui -->
+</div>
+
+<h2>Carrello</h2>
+
+<div id="cart">
+  <ul id="cart-items"></ul>
+  <p id="total">Totale: $0</p>
+  <button onclick="checkout()">Checkout</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

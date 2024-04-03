@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style_prodotti.css">
+    <title>Micio's Skins - Products</title>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="logo.png" alt="Logo" height="50" width="50">
+        </div>
+        <div class="menu">
+            <a href="home.html">Home</a>
+            <a href="custom.html">Custom</a>
+            <a href="#">Supporto</a>
+        </div>
+    </div>
+
+    <div class="header2">
+      <div>Skins</div>
+    </div>
+
+    <div class="container">
+        <div class="box">
+          <img src="cop_killer.png" alt="Prodotto 1" width="300" height="300">
+          <a href="#">Cop killer</a>
+          <p>10,00€</p>
+          <button onclick="add('cop killer', 10)"id="carrello">Aggiungi al carrello</button>
+        </div>
+
+        <div class="box">
+          <img src="fvck_police.png" alt="Prodotto 2" width="300" height="300">
+          <a href="#">Fvck police</a>
+          <p>5,00€</p>
+          <button onclick="add('fvck police', 5)" id="carrello">Aggiungi al carrello</button>
+        </div>
+
+        <div class="box">
+            <img src="green_ninja.png" alt="Prodotto 2" width="300" height="300">
+            <a href="#">Bamboo</a>
+            <p>9,50€</p>
+            <button onclick="add('bamboo', 9.50)" id="carrello">Aggiungi al carrello</button>
+          </div>
+
+        <div class="box">
+          <img src="japan_dragon.png" alt="Prodotto 2" width="300" height="300">
+          <a href="#">Japan dragon</a>
+          <p>10,00€</p>
+          <button onclick="add('japan dragon', 10)" id="carrello">Aggiungi al carrello</button>
+        </div>
+
+        <div class="box">
+          <img src="new_glock.png" alt="Prodotto 2" width="300" height="300">
+          <a href="#">Angel glock</a>
+          <p>6,90€</p>
+          <button onclick="add('angel glock', 6.90)" id="carrello">Aggiungi al carrello</button>
+        </div>
+
+        <div class="box">
+          <img src="offwhite_scifi.png" alt="Prodotto 2" width="300" height="300">
+          <a href="#">Purple offwhite</a>
+          <p>6,50€</p>
+          <button onclick="add('purple off white', 6.50)" id="carrello">Aggiungi al carrello</button>
+        </div>
+
+        <div class="box">
+          <img src="purple_thunder.png" alt="Prodotto 2" width="300" height="300">
+          <a href="#">Purple thunder</a>
+          <p>6,00€</p>
+          <button onclick="add('purple thunder', 6)" id="carrello">Aggiungi al carrello</button>
+        </div>
+
+        <div class="box">
+          <img src="red_dragon.png" alt="Prodotto 2" width="300" height="300">
+          <a href="#">Red dragon</a>
+          <p>15,00€</p>
+          <button onclick="add('red dragon', 15)" id="carrello">Aggiungi al carrello</button>
+        </div>
+      </div>
+      <div id="cart">
+        <ul id="cart-items"></ul>
+        <p id="total">Totale: $0</p>
+        <button id="checkout" onclick="checkout()">Checkout</button>
+      </div>
+    <div class="footer">
+      <a href="#">&copy; 2024 - Tutti i diritti sono riservati</a>
+      <a href="#">Chi siamo</a>
+      <a href="#">I nostri contatti</a>
+    </div>
+    
+  <script>
+    let cartItems = [];
+    let total = 0;
+
+    function add(productName, price) {
+      cartItems.push({ productName, price });
+      total += price;
+      updateCart();
+    }
+
+    function updateCart() {
+      const cartList = document.getElementById('cart-items');
+      cartList.innerHTML = '';
+      cartItems.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = `${item.productName} - Prezzo: $${item.price}`;
+        cartList.appendChild(li);
+      });
+      document.getElementById('total').textContent = `Totale: $${total}`;
+    }
+
+    function checkout() {
+      alert(`Hai acquistato ${cartItems.length} prodotti con un totale di $${total}. Grazie per il tuo acquisto!`);
+      cartItems = [];
+      total = 0;
+      updateCart();
+    }
+
+  </script>
+</body>
+</html>

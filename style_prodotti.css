@@ -1,0 +1,176 @@
+@font-face {
+    font-family: 'utendo';
+    src: url('Utendo-Regular.ttf') format('truetype'); /* Modificato il formato correttamente */
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0; /* Iniziale trasparenza */
+    }
+    100% {
+        opacity: 1; /* Trasparenza finale */
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: utendo, sans-serif;
+    animation: fadeInOut 4s ease alternate;
+    background-color: #1a1a1a;
+}
+.header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    margin-left: 20px;
+}
+.menu {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+.menu a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 10px;
+    margin: 0 5px;
+    border-radius: 5px;
+}
+.menu a:hover {
+    background-color: #2263db;
+}
+
+
+.header2{
+    background-color: #2263db;
+    text-align: center;
+    padding: 10px;
+    font-family: utendo;
+    font-size: 25px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .box {
+    width: 20vw;/* 25% della larghezza del container, con 20px di margine tra i box */
+    margin-bottom: 20px;
+    margin-top: 2vh;
+    padding: 20px;
+    background-color: #f0f0f0;
+    box-sizing: border-box; /* Include padding e bordi nell'area totale del box */
+    text-align: center;
+    margin-left: 15px;
+    margin-right: 15px;
+    border-radius: 20px;
+    margin-inline: 15px;
+  }
+  
+  .box img {
+    width: 100%; /* Rende l'immagine larga quanto il box */
+    height: auto; /* Mantiene le proporzioni */
+  }
+  
+  .box a {
+    margin-top: 15px;
+    text-decoration: none;
+    color: #1a1a1a;
+    font-size: 30px;
+    text-align: left;
+  }
+  
+  .box p {
+    margin-top: 5px;
+    font-size: 20px;
+    text-align: center;
+  }
+
+.box button{
+    border: solid 4px #0b2e6d;
+    border-radius: 20px;
+    font-size: 20px;
+    background-color: #2263db;
+    color:#ffffff;
+    padding: 13px;
+    font-family: utendo;
+    text-align: center;
+}
+
+.box button:hover{
+    border-color: #7f8ca2;
+    background-color: #1e52b3;
+}
+  
+
+.footer{
+    background-color: #333;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 97%;
+    text-decoration: none;
+}
+.footer a {
+    margin-bottom: auto;
+    margin: 10px;
+    color: #ffffff;
+}
+
+.footer a:hover{
+    margin-bottom: auto;
+    margin: 10px;
+    color: #2263db;
+}
+
+#products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .product {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .product img {
+    max-width: 100px;
+    max-height: 100px;
+  }
+  
+  #cart {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 20px;
+    padding: 10px;
+  }
+  
+  #cart-items {
+    padding: 0;
+    list-style-type: none;
+    color:#ffffff;
+  }
+  
+  #cart-items li {
+    margin-bottom: 5px;
+    color:#ffffff;
+  }
+  
+  #total {
+    text-align: right;
+    color:#ffffff;
+  }

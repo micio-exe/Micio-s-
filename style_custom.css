@@ -1,0 +1,155 @@
+@font-face {
+    font-family: 'utendo';
+    src: url('Utendo-Regular.ttf') format('truetype'); /* Modificato il formato correttamente */
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0; /* Iniziale trasparenza */
+    }
+    100% {
+        opacity: 1; /* Trasparenza finale */
+    }
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: utendo, sans-serif;
+    animation: fadeInOut 4s ease alternate;
+    background-color: #1a1a1a;
+}
+.header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    margin-left: 20px;
+}
+.menu {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+.menu a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 10px;
+    margin: 0 5px;
+    border-radius: 5px;
+}
+.menu a:hover {
+    background-color: #2263db;
+}
+
+.header2{
+    background-color: #2263db;
+    text-align: center;
+    padding: 10px;
+    font-family: utendo;
+    font-size: 25px;
+}
+
+.modello h1{
+    margin-left: 28%;
+    color: #ffffff;
+    border: solid 3px rgb(75, 138, 255);
+    background-color: #2263db;
+    padding: 5px;
+    width: 40vw;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.modello h3{
+    margin-left: 20px;
+    color: #ffffff;
+    font-size: 30px;
+}
+
+.accessori h3{
+    margin-left: 20px;
+    color: #ffffff;
+    font-size: 30px;
+}
+
+.descrizione h3{
+    margin-left: 20px;
+    color: #ffffff;
+    font-size: 30px;
+}
+
+.descrizione textarea{
+    width: 60vw;
+    height: 20vh;
+    border: solid 5px #2263db;
+    border-radius: 20px;
+    padding: 10px;
+    margin-left: 20px;
+    margin-bottom: 40px;
+}
+
+.descrizione button{
+    margin-left: -62vw;
+    color: #ffffff;
+    font-size: 20px;
+    border: solid 5px #15408f;
+    background-color: #2263db;
+    border-radius: 20px;
+    padding: 10px;
+    font-family: utendo;
+    margin-bottom: 5vh;
+    text-align: center;
+    width: 15vw;
+    height: 5vh;
+}
+
+.descrizione button:hover{
+    background-color: #15408f;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    margin-inline: 10px;
+}
+
+
+
+.box {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background-color: #f0f0f0;
+    font-size: 20px;
+}
+
+.footer{
+    background-color: #333;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 97%;
+    text-decoration: none;
+}
+.footer a {
+    margin-bottom: auto;
+    margin: 10px;
+    color: #ffffff;
+}
+
+.footer a:hover{
+    margin-bottom: auto;
+    margin: 10px;
+    color: #2263db;
+}
